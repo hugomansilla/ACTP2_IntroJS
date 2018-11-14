@@ -61,17 +61,12 @@ Tip: Investigar el evento window.onload
   	</div>
 
   	<script type="text/javascript">
-  		$(function(){
-  			alert("antes de la carga");
-  		})
   		window.onload = function() {
-  		init();
-  		doSomethingElse();
+  			alert("terminar la carga");
 		};
-  		function load() {
-        alert("evento load detectado!");
-      }
-      window.onload = load;
+		$(document).ready(function(){
+			alert("document carga");
+		})
   	</script>
   </body>
 </html>
